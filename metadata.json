@@ -1,0 +1,8 @@
+{
+  "name": "AI Empowerment Foundation",
+  "description": "Turning AI knowledge into real-world opportunity, leadership, and economic impact. Founded by Adebola Ibiyode.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

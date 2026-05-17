@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Empowerment Foundation</title>
+    <meta name="description" content="AI Empowerment Foundation - Bridging the gap between AI potential and human excellence." />
+    <script>
+      (function() {
+        var originalParse = JSON.parse;
+        JSON.parse = function(v) {
+          if (v === 'undefined') {
+            console.warn('Caught JSON.parse("undefined") - returning undefined to prevent crash. Source:');
+            console.trace();
+            return undefined;
+          }
+          return originalParse.apply(this, arguments);
+        };
+
+        var originalFetch = window.fetch;
+        try {
+          if (Object.getOwnPropertyDescriptor(window, 'fetch').set) return;
+          Object.defineProperty(window, 'fetch', {
+            get: function() { return originalFetch; },
+            set: function(v) { 
+              console.warn('Prevented window.fetch overwrite attempt:', v);
+            },
+            configurable: true
+          });
+        } catch (e) {
+          // If we can't redefine it, it might already be fixed or inaccessible
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
