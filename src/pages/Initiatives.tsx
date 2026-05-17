@@ -8,15 +8,27 @@ export default function Initiatives() {
   return (
     <div className="pt-24 min-h-screen">
       {/* Page Header */}
-      <section className="section-pad bg-surface/30">
+      <section className="section-pad bg-surface/30 pt-40">
         <div className="container-custom">
-          <div className="text-xs font-bold tracking-[0.2em] text-secondary uppercase mb-6">Our initiatives</div>
-          <h1 className="text-[clamp(36px,6vw,72px)] font-bold leading-tight mb-8 max-w-4xl lowercase first-letter:uppercase">
-            Turning AI <span className="text-primary italic">into action.</span>
-          </h1>
-          <p className="text-lg text-foreground/80 max-w-2xl leading-relaxed">
-            We build the platforms where knowledge meets execution. Our initiatives are designed to create real impact for builders, professionals, and organisations.
-          </p>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="text-xs font-bold tracking-[0.2em] text-secondary uppercase mb-6">Our initiatives</div>
+              <h1 className="text-[clamp(36px,6vw,72px)] font-bold leading-tight mb-8 lowercase first-letter:uppercase">
+                Turning AI <span className="text-primary italic">into action.</span>
+              </h1>
+              <p className="text-lg text-foreground/80 max-w-2xl leading-relaxed">
+                We build the platforms where knowledge meets execution. Our initiatives are designed to create real impact for builders, professionals, and organisations.
+              </p>
+            </div>
+            <div className="relative aspect-[16/10] bg-primary overflow-hidden rounded-2xl shadow-xl border border-outline/30 group">
+              <img 
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
+                alt="AI Strategy Collaboration"
+              />
+              <div className="absolute inset-0 bg-primary/5 mix-blend-multiply" />
+            </div>
+          </div>
         </div>
       </section>
 

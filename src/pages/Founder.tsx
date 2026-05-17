@@ -8,50 +8,47 @@ export default function Founder() {
   return (
     <div className="pt-24 min-h-screen">
       {/* Page Header */}
-      <section className="section-pad bg-surface/30">
+      <section className="section-pad bg-surface/30 pt-40">
         <div className="container-custom">
-          <div className="text-xs font-bold tracking-[0.2em] text-secondary uppercase mb-6">About the Founder</div>
-          <h1 className="text-[clamp(36px,6vw,72px)] font-bold leading-tight mb-8 max-w-4xl">
-            Built on <span className="text-primary italic">Real AI</span> Experience.
-          </h1>
-          <p className="text-lg text-foreground/80 max-w-2xl leading-relaxed">
-            Adebola Ibiyode is an engineer, leader, and advisor dedicated to making AI practical for real-world impact.
-          </p>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="text-xs font-bold tracking-[0.2em] text-secondary uppercase mb-6">About the Founder</div>
+              <h1 className="text-[clamp(36px,6vw,72px)] font-bold leading-tight mb-8">
+                Built on <span className="text-primary italic">Real AI</span> Experience.
+              </h1>
+              <p className="text-lg text-foreground/80 max-w-2xl leading-relaxed">
+                Adebola Ibiyode is an engineer, leader, and advisor dedicated to making AI practical for real-world impact.
+              </p>
+            </div>
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-outline/30 grayscale hover:grayscale-0 transition-all duration-1000 group">
+              <img 
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop" 
+                alt="Adebola Ibiyode" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+              />
+              <div className="absolute inset-0 bg-primary/5 mix-blend-multiply" />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Story Section */}
       <section className="section-pad border-y border-outline/30">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-24 items-center">
-            <div className="relative group">
-              <div className="aspect-[4/5] bg-surface rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000 border border-outline/30">
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1200&auto=format&fit=crop" 
-                  alt="Adebola Ibiyode" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
-                />
-              </div>
-              <div className="absolute -bottom-8 -right-8 p-10 bg-primary text-white rounded-2xl shadow-2xl hidden md:block border border-white/10">
-                 <div className="font-bold text-4xl mb-2 text-white">20+</div>
-                 <div className="text-[10px] font-bold uppercase tracking-widest opacity-80">Years in Tech</div>
-              </div>
+          <div className="max-w-4xl mx-auto">
+            <span className="text-[10px] font-bold tracking-[0.2em] text-secondary uppercase mb-8 block text-center">Founder's Vision</span>
+            <h2 className="text-5xl font-bold mb-10 tracking-tighter italic leading-tight text-foreground text-center">Engineering leadership meets strategic vision.</h2>
+            <div className="space-y-8 text-foreground/80 leading-relaxed text-xl font-light">
+              <p>
+                Debola merges technical mastery with over two decades of engineering leadership. As the founder of CarbonAI, she has built scalable AI systems that solve complex challenges.
+              </p>
+              <p>
+                Through the AI Empowerment Foundation, she is committed to guiding the next generation of builders. Her approach is executive, practical, and grounded in the belief that AI should be a tool for economic advancement.
+              </p>
             </div>
-            <div>
-              <span className="text-[10px] font-bold tracking-[0.2em] text-secondary uppercase mb-8 block">Founder's Vision</span>
-              <h2 className="text-5xl font-bold mb-10 tracking-tighter italic leading-tight text-foreground">Engineering leadership meets strategic vision.</h2>
-              <div className="space-y-8 text-foreground/80 leading-relaxed text-xl font-light">
-                <p>
-                  Debola merges technical mastery with over two decades of engineering leadership. As the founder of CarbonAI, she has built scalable AI systems that solve complex challenges.
-                </p>
-                <p>
-                  Through the AI Empowerment Foundation, she is committed to guiding the next generation of builders. Her approach is executive, practical, and grounded in the belief that AI should be a tool for economic advancement.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-4 mt-16">
-                <button onClick={() => navigate('/leadership')} className="btn-primary">Book to Speak</button>
-                <button onClick={() => navigate('/contact')} className="btn-outline">Get in Touch</button>
-              </div>
+            <div className="flex flex-wrap justify-center gap-4 mt-16">
+              <button onClick={() => navigate('/leadership')} className="btn-primary">Book to Speak</button>
+              <button onClick={() => navigate('/contact')} className="btn-outline">Get in Touch</button>
             </div>
           </div>
         </div>

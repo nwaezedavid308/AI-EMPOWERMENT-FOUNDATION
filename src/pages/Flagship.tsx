@@ -8,15 +8,28 @@ export default function Flagship() {
   return (
     <div className="pt-24 min-h-screen">
       {/* Page Header */}
-      <section className="section-pad bg-surface/30 relative overflow-hidden">
+      <section className="section-pad bg-surface/30 relative overflow-hidden pt-40">
         <div className="container-custom relative z-10">
-          <div className="text-xs font-bold tracking-[0.3em] text-secondary uppercase mb-8">Flagship Initiative</div>
-          <h1 className="text-[clamp(44px,7vw,96px)] font-bold leading-[1.05] tracking-tighter mb-10 max-w-5xl">
-            AI in <span className="text-primary italic font-medium">action now.</span>
-          </h1>
-          <p className="text-xl text-foreground/80 max-w-2xl leading-relaxed font-light">
-            The definitive platform for practical AI execution. Built for pioneers who move beyond the hype cycle to deliver scalable technical reality.
-          </p>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="text-xs font-bold tracking-[0.3em] text-secondary uppercase mb-8">Flagship Initiative</div>
+              <h1 className="text-[clamp(44px,7vw,96px)] font-bold leading-[1.05] tracking-tighter mb-10">
+                AI in <span className="text-primary italic font-medium">action now.</span>
+              </h1>
+              <p className="text-xl text-foreground/80 max-w-2xl leading-relaxed font-light">
+                The definitive platform for practical AI execution. Built for pioneers who move beyond the hype cycle to deliver scalable technical reality.
+              </p>
+            </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-outline/30 group">
+              <img 
+                src="https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?q=80&w=1200&auto=format&fit=crop" 
+                alt="AI in Action Conference" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+              />
+              <div className="absolute inset-0 bg-primary/20 mix-blend-overlay" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+            </div>
+          </div>
         </div>
         <div className="absolute top-0 right-0 w-[40vw] h-full bg-[radial-gradient(circle_at_70%_30%,var(--aief-color-secondary),transparent_70%)] opacity-[0.03] pointer-events-none" />
       </section>

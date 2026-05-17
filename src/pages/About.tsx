@@ -8,15 +8,27 @@ export default function About() {
   return (
     <div className="pt-24 min-h-screen">
       {/* Page Header */}
-      <section className="section-pad bg-surface/30 relative overflow-hidden">
+      <section className="section-pad bg-surface/30 relative overflow-hidden pt-40">
         <div className="container-custom relative z-10">
-          <div className="text-xs font-bold tracking-[0.3em] text-secondary uppercase mb-8">About the Foundation</div>
-          <h1 className="text-[clamp(44px,7vw,96px)] font-bold leading-[1.05] tracking-tighter mb-10 max-w-5xl">
-            Building the future<br />through <span className="text-primary italic">practical empowerment.</span>
-          </h1>
-          <p className="text-xl text-foreground/80 max-w-2xl leading-relaxed font-light">
-            We bridge the gap between AI complexity and practical application. Rooted in technical excellence and led by experienced builders.
-          </p>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="text-xs font-bold tracking-[0.3em] text-secondary uppercase mb-8">About the Foundation</div>
+              <h1 className="text-[clamp(44px,7vw,96px)] font-bold leading-[1.05] tracking-tighter mb-10">
+                Building the future<br />through <span className="text-primary italic">practical empowerment.</span>
+              </h1>
+              <p className="text-xl text-foreground/80 max-w-2xl leading-relaxed font-light">
+                We bridge the gap between AI complexity and practical application. Rooted in technical excellence and led by experienced builders.
+              </p>
+            </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-outline/30 group">
+              <img 
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" 
+                alt="Community Collaboration" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+              />
+              <div className="absolute inset-0 bg-primary/5 mix-blend-multiply" />
+            </div>
+          </div>
         </div>
       </section>
 

@@ -8,15 +8,27 @@ export default function Leadership() {
   return (
     <div className="pt-24 min-h-screen">
       {/* Page Header */}
-      <section className="section-pad bg-surface/30">
+      <section className="section-pad bg-surface/30 pt-40">
         <div className="container-custom">
-          <div className="text-xs font-bold tracking-[0.2em] text-secondary uppercase mb-6">Leadership & Advisory</div>
-          <h1 className="text-[clamp(36px,6vw,72px)] font-bold leading-tight mb-8 max-w-4xl">
-            AI Leadership <span className="text-primary italic">That Delivers.</span>
-          </h1>
-          <p className="text-lg text-foreground/80 max-w-2xl leading-relaxed">
-            We work with organisations, leaders, and communities to drive meaningful AI adoption through strategic advisory and executive speaking.
-          </p>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="text-xs font-bold tracking-[0.2em] text-secondary uppercase mb-6">Leadership & Advisory</div>
+              <h1 className="text-[clamp(36px,6vw,72px)] font-bold leading-tight mb-8">
+                AI Leadership <span className="text-primary italic">That Delivers.</span>
+              </h1>
+              <p className="text-lg text-foreground/80 max-w-2xl leading-relaxed">
+                We work with organisations, leaders, and communities to drive meaningful AI adoption through strategic advisory and executive speaking.
+              </p>
+            </div>
+            <div className="relative aspect-[16/10] bg-surface rounded-2xl overflow-hidden shadow-2xl border border-outline/30 group">
+              <img 
+                src="https://images.unsplash.com/photo-1475721027785-f74dea327912?q=80&w=1200&auto=format&fit=crop" 
+                alt="Executive Boardroom" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+              />
+              <div className="absolute inset-0 bg-primary/5 mix-blend-multiply" />
+            </div>
+          </div>
         </div>
       </section>
 
